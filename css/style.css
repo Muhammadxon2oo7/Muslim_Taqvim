@@ -8,10 +8,9 @@
 }
 
 body {
-  background: url("../img/bg.jpg");
+  background: url("../img/back-img (1).png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top -200px left 0px;
 }
 
 .blur {
