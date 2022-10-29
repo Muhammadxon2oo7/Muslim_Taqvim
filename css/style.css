@@ -112,6 +112,7 @@ body {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 10px;
+  z-index: 1;
 }
 .main .select .selct__wrapper .options {
   padding-left: 5px;
@@ -147,6 +148,7 @@ body {
           justify-content: space-between;
   position: relative;
   margin-bottom: 80px;
+  z-index: -1;
 }
 .data .Geolocatsiya {
   display: -webkit-box;
@@ -187,6 +189,7 @@ body {
   position: absolute;
   right: 139px;
   align-items: center;
+  z-index: -1;
 }
 .data .calendar i {
   font-size: 40px;
