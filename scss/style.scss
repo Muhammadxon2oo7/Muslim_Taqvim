@@ -9,8 +9,6 @@ body{
     background: url("../img/back-img\ \(1\).png");
     background-repeat: repeat-y;
     background-size:cover;
-
-    // background-position:top -200px  left 0px ;
 }
 .blur{
     width: 100%;
@@ -112,8 +110,6 @@ body{
                     color: #13003C; 
                     margin-bottom: 10px;
                     &:hover{
-                        // width: 199px;
-                        // height: 42px;
                         background: #FFFFFF;
                         border-radius: 10px 10px 0px 0px;
                         padding-left: 30px;
@@ -164,9 +160,6 @@ body{
         position: relative;
         right: 139px;
         align-items: center;
-        background-color: rgb(0, 0, 0);
-        border: 1px solid red;
-        border: 1px solid white;
         i{
             font-size: 40px;
             color: #fff;
@@ -208,7 +201,6 @@ body{
         height: 397px;
         background-color: rgba(255, 255, 255, 0.2);
         box-shadow: 0px 10px 100px 10px rgba(255, 255, 255, 0.2);
-        //filter: blur(2px);
         border-radius: 25px;
         display: flex;
         flex-wrap: wrap;
@@ -288,9 +280,7 @@ body{
             .cards{
                 display: grid;
                 grid-template-columns:auto auto auto;
-                .card{
-               
-                }
+                
             }
         }
     }
@@ -325,7 +315,6 @@ body{
                     width: 100%;
                     position: absolute;
                     margin: 0 auto;
-                    //background-color: red;
                     margin-bottom: 20px;
                     &::after{
                         content: '';
@@ -364,7 +353,6 @@ body{
                 }
                 .Geolocatsiya{
                     position: absolute;
-                    border: 1px solid black;
                     display: none;
                 }
                 .select__location{

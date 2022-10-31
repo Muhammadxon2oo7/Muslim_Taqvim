@@ -192,9 +192,6 @@ body {
   position: relative;
   right: 139px;
   align-items: center;
-  background-color: rgb(0, 0, 0);
-  border: 1px solid red;
-  border: 1px solid white;
 }
 .data .calendar i {
   font-size: 40px;
@@ -406,7 +403,6 @@ body {
   }
   body .blur .location .Geolocatsiya {
     position: absolute;
-    border: 1px solid black;
     display: none;
   }
   body .blur .location .select__location {
