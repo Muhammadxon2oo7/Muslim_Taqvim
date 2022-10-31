@@ -7,13 +7,14 @@
 @import url("../fonts/fonst.css");
 body{
     background: url("../img/back-img\ \(1\).png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat-y;
+    background-size:cover;
+
     // background-position:top -200px  left 0px ;
 }
 .blur{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: block;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(12.5px);
@@ -48,6 +49,7 @@ body{
     }
 }
 .main{
+    height: auto;
     .select{
         display: flex;
         justify-content: center;
@@ -159,14 +161,17 @@ body{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        position: absolute;
+        position: relative;
         right: 139px;
         align-items: center;
-        z-index: -1;
+        background-color: rgb(0, 0, 0);
+        border: 1px solid red;
+        border: 1px solid white;
         i{
             font-size: 40px;
             color: #fff;
             margin-right: 16px;
+            height: 50px;
         }
         .dateinfo{
             font-family: 'Jost';
@@ -209,6 +214,7 @@ body{
         flex-wrap: wrap;
         justify-content: center;
         padding-top: 20px;
+        margin-bottom: 20px;
         p{
             font-family: 'Jost';
             font-style: normal;
@@ -233,6 +239,267 @@ body{
             
             color: #FFFFFF;
             
+        }
+    }
+}
+
+@media only screen and (max-width:1311px) {
+    body{
+        background-position: center;
+        .blur{
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 100%;
+            height: 100%;
+            .title{
+                width: 100%;
+                height: 100%;
+                h1{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            .data{
+                width: 100%;
+                position: relative;
+            }
+           
+            .calendar{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                i{
+                    position: absolute;
+                    right: 450px;
+                }
+                .dateinfo{
+                    width: auto;
+                    position: absolute;
+                    right: 170px;
+                    width: 290px;
+                    margin-right: 0;
+                }
+                .timeinfo{
+                    width: 150px;
+                    right: 0;
+                }
+            }
+            .cards{
+                display: grid;
+                grid-template-columns:auto auto auto;
+                .card{
+               
+                }
+            }
+        }
+    }
+} 
+@media only screen and (max-width:835px){
+    body{
+        background-image: url(../img/mobileBg.svg);
+        .blur{
+            background-color: transparent;
+            backdrop-filter: blur(0);
+            padding: 0;
+            .title{
+                background-color: #0B422D;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+            .location{
+                width: 90%;
+                height: 123px;
+                margin: 0 auto;
+                border-radius: 10px;
+                background-color: #0B422D;
+                margin-bottom: 20px;
+                position: relative;
+
+                .select{
+                    z-index: 2;
+                    width: 100%;
+                    position: absolute;
+                    margin: 0 auto;
+                    //background-color: red;
+                    margin-bottom: 20px;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 60%;
+                        height: 3px;
+                        z-index: 5;
+                        bottom: -10px;
+                        margin: 0 auto;
+                        background: #FFFFFF;
+                        border-radius: 50px;
+                    }
+                    .selct__wrapper{
+                        border: none;
+                        position: relative;
+                        box-shadow: none;
+                        width: auto;
+                        text-align: center;
+                        .select_main{
+                            font-family: 'Jost';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 30px;
+                            line-height: 29px;
+                            color: #FFC700; 
+                            margin-bottom: 25px;
+                            
+                        }                     
+                        i{
+                            background: transparent;
+                            color: transparent;
+                            width: 199px;
+                            position: absolute;
+                        }
+                    }
+                }
+                .Geolocatsiya{
+                    position: absolute;
+                    border: 1px solid black;
+                    display: none;
+                }
+                .select__location{
+                    display: none;
+                }
+                .data{
+                    position: absolute;
+                    top: 20px;
+                    z-index: 1;
+                    height: 100%;;
+                    width: 100%;
+                    .calendar{
+                        position: absolute;
+                        left: 0;
+                        height: 30px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        background-color: transparent;
+                        border: none;
+                        .dateinfo{
+                            width: auto;
+                            position: static;
+                            margin-right: 0;
+                            margin-right: 20px;
+                        }
+                        .timeinfo{
+                            position: static;
+                            width: 150px;
+                            right: 0;
+                        }
+                        i{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .cards{
+                width: 90%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: auto auto;
+                .card{
+                    background-color: #008653;
+                    box-shadow: 2px 2px 10px 5px #0B422D;
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width:600px){
+    body{
+        
+        .blur{
+            .location{
+                .select{
+                    .selct__wrapper{
+                        .select_main{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .data{
+
+                .calendar{
+                    display: flex;
+                    justify-content: center;
+                    padding-left: 50px;
+                    .dateinfo{
+                        font-size: 15px;
+                    }
+                    .timeinfo{
+                        font-size: 15px;
+                    }
+                }
+            }
+            .cards{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+                .card{
+                    // width: 210px;
+                    // height: 210px;
+                    width: 100%;
+                    height: 100%;
+                    p{
+                        width: 100%;
+                        text-align: center;
+                        font-family: 'Jost';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 23px;
+                        color: #FFC700;
+                    }
+                    .img{
+                        width: 138px;
+                        height: 127px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:412px){
+    body{
+        .blur{
+            .location{
+                .data{
+                
+                    .calendar{
+                        padding-left: 0;
+                        display: flex;
+                        justify-content: space-between;
+                        .dateinfo{
+                            display: flex;
+                            justify-content: center;
+                            padding-left: 10px;
+                            width: 50%;
+                        }
+                        .timeinfo{
+                            width: 50%;
+                           display: flex;
+                           justify-content: center;
+                        }
+                    }
+                }
+            }
         }
     }
 }

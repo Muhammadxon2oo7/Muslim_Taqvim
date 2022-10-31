@@ -52,6 +52,7 @@ selectUlEl.addEventListener('click',(e)=>{
     StrongEl.innerHTML=name
     selectWrapperEl.style.overflow="hidden"  
     ;(()=>{
+        const Base_Api="https://islomapi.uz/api";
         fetch(Base_Api+"/present/day"+"?region="+name)
         .then(res=>res.json())
         .then(data=>renderData(data))
@@ -125,6 +126,3 @@ setInterval(()=>{
 },(1000))
 
 // Api
-
-const Base_Api="https://islomapi.uz/api";
-
