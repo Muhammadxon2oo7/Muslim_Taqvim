@@ -124,5 +124,3 @@ setInterval(()=>{
     let timeinfo=document.getElementById("timeinfo")
     timeinfo.innerHTML=`${h.toString().padStart(2,'0')} : ${m.toString().padStart(2,'0')} : ${s.toString().padStart(2,'0')}`
 },(1000))
-
-// Api
